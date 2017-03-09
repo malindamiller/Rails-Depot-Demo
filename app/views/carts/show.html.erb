@@ -8,3 +8,6 @@
     <li><%= item.quantity %> &times; <%=item.product.title %></li>
   <% end %>
 </ul>
+<h1><%= number_to_currency(@cart.total_price) %></h1>
+<%= button_to 'Empty Cart', @cart, method: :delete,
+    data: { confirm: 'Are you sure?'} %>
